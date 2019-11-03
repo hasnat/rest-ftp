@@ -1,0 +1,26 @@
+version: '2.4'
+
+services:
+  restful-ftp:
+    image: hasnat/restful-ftp
+    ports:
+      - "3000:3000"
+    environment:
+      FTP_USER: admin
+      FTP_PASS: admin
+      FTP_HOST: ftp-server
+      FTP_PORT: 21
+      FTP_SECURE: "false"
+
+  # ftp for local testing purpose
+  ftp-server:
+    restart: always
+    container_name: ftp-server
+    image: stilliard/pure-ftpd
+    environment:
+      FTP_USER_NAME: admin
+      FTP_USER_PASS: admin
+      FTP_USER_UID: 104
+      FTP_USER_GID: 107
+      FTP_USER_HOME: /home/vsftpd/admin
+      PUBLICHOST: ftp-server
