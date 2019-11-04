@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@hasnat/ftpfs": "^1.2.0",
+    "@hasnat/ftpfs": "^1.2.1",
     "@hasnat/rest-fs": "^0.2.0",
     "express": "^4.17.1"
   }

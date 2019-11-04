@@ -17,6 +17,9 @@ services:
     restart: always
     container_name: ftp-server
     image: stilliard/pure-ftpd
+    ports:
+      - "21:21"
+      - "30000-30009:30000-30009"
     environment:
       FTP_USER_NAME: admin
       FTP_USER_PASS: admin
